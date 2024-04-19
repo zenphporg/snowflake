@@ -17,8 +17,6 @@ class RedisResolver implements SequenceResolver
 
   /**
    * The cache prefix.
-   *
-   * @var string
    */
   protected string $prefix = '';
 
@@ -38,9 +36,6 @@ class RedisResolver implements SequenceResolver
 
   /**
    * Increment the sequence.
-   *
-   * @param  int  $currentTime
-   * @return int
    */
   public function sequence(int $currentTime): int
   {
@@ -58,7 +53,6 @@ class RedisResolver implements SequenceResolver
   /**
    * Set cache prefix.
    *
-   * @param  string  $prefix
    * @return \Zen\Snowflake\RedisResolver
    */
   public function setCachePrefix(string $prefix): RedisResolver

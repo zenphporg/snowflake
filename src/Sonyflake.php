@@ -14,8 +14,6 @@ class Sonyflake extends Snowflake implements SnowflakeDriver
 
   /**
    * The machine ID.
-   *
-   * @var int
    */
   protected int $machineid;
 
@@ -36,8 +34,6 @@ class Sonyflake extends Snowflake implements SnowflakeDriver
 
   /**
    * Get Sonyflake id.
-   *
-   * @return string
    */
   public function id(): string
   {
@@ -68,9 +64,6 @@ class Sonyflake extends Snowflake implements SnowflakeDriver
 
   /**
    * Set start time (millisecond).
-   *
-   * @param  int  $startTime
-   * @return Sonyflake
    */
   public function setStartTimeStamp(int $startTime): Sonyflake
   {
@@ -92,9 +85,7 @@ class Sonyflake extends Snowflake implements SnowflakeDriver
   /**
    * Parse snowflake id.
    *
-   * @param  string  $id
    * @param  bool  $transform
-   * @return array
    */
   public function parseId(string $id, $transform = false): array
   {
@@ -114,8 +105,6 @@ class Sonyflake extends Snowflake implements SnowflakeDriver
 
   /**
    * The Elapsed Time.
-   *
-   * @return int
    */
   private function elapsedTime(): int
   {

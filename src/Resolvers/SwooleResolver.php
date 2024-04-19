@@ -15,8 +15,6 @@ class SwooleResolver implements SequenceResolver
 
   /**
    * The sequence.
-   *
-   * @var int
    */
   protected int $sequence = 0;
 
@@ -29,8 +27,6 @@ class SwooleResolver implements SequenceResolver
 
   /**
    * The cycle count.
-   *
-   * @var int
    */
   protected int $count = 0;
 
@@ -44,9 +40,6 @@ class SwooleResolver implements SequenceResolver
 
   /**
    * Increment the sequence.
-   *
-   * @param  int  $currentTime
-   * @return int
    */
   public function sequence(int $currentTime): int
   {

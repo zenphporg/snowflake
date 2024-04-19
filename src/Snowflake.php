@@ -20,15 +20,11 @@ class Snowflake implements SnowflakeDriver
 
   /**
    * The data center id.
-   *
-   * @var int
    */
   protected ?int $datacenter;
 
   /**
    * The worker id.
-   *
-   * @var int
    */
   protected ?int $workerid;
 
@@ -41,8 +37,6 @@ class Snowflake implements SnowflakeDriver
 
   /**
    * The start timestamp.
-   *
-   * @var int
    */
   protected int $startTime;
 
@@ -55,11 +49,8 @@ class Snowflake implements SnowflakeDriver
 
   /**
    * Build Snowflake Instance.
-   *
-   * @param  int  $datacenter
-   * @param  int  $workerid
    */
-  public function __construct(int $datacenter = null, int $workerid = null)
+  public function __construct(?int $datacenter = null, ?int $workerid = null)
   {
     $maxDataCenter = -1 ^ (-1 << self::MAX_DATACENTER_LENGTH);
     $maxWorkId = -1 ^ (-1 << self::MAX_WORKID_LENGTH);
@@ -71,8 +62,6 @@ class Snowflake implements SnowflakeDriver
 
   /**
    * Get snowflake id.
-   *
-   * @return string
    */
   public function id(): string
   {
@@ -95,9 +84,7 @@ class Snowflake implements SnowflakeDriver
   /**
    * Parse snowflake id.
    *
-   * @param  string  $id
    * @param  bool  $transform
-   * @return array
    */
   public function parseId(string $id, $transform = false): array
   {
@@ -117,8 +104,6 @@ class Snowflake implements SnowflakeDriver
 
   /**
    * Get current microtime timestamp.
-   *
-   * @return int
    */
   public function getCurrentMicrotime(): int
   {
@@ -127,9 +112,6 @@ class Snowflake implements SnowflakeDriver
 
   /**
    * Set start time (milliseconds).
-   *
-   * @param  int  $startTime
-   * @return Snowflake
    */
   public function setStartTimeStamp(int $startTime): Snowflake
   {
@@ -152,8 +134,6 @@ class Snowflake implements SnowflakeDriver
 
   /**
    * Get start timestamp (millisecond), If not set default to 2020-06-06 06:06:06.
-   *
-   * @return int
    */
   public function getStartTimeStamp(): int
   {
@@ -171,7 +151,6 @@ class Snowflake implements SnowflakeDriver
    * Set Sequence Resolver.
    *
    * @param  \Zen\Snowflake\SequenceResolver|callable  $sequence
-   * @return Snowflake
    */
   public function setSequenceResolver($sequence): Snowflake
   {
@@ -206,7 +185,6 @@ class Snowflake implements SnowflakeDriver
    *
    * @param  callable|\Zen\Snowflake\SequenceResolver  $resolver
    * @param  int  $maxSequence
-   * @return int
    */
   protected function callResolver($currentTime): int
   {

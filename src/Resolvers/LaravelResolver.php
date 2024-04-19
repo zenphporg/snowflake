@@ -9,8 +9,6 @@ class LaravelResolver implements SequenceResolver
 {
   /**
    * The laravel cache instance.
-   *
-   * @var Repository
    */
   protected Repository $cache;
 
@@ -24,9 +22,6 @@ class LaravelResolver implements SequenceResolver
 
   /**
    * Increment the sequence.
-   *
-   * @param  int  $currentTime
-   * @return int
    */
   public function sequence(int $currentTime): int
   {

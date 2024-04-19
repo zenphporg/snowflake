@@ -70,9 +70,6 @@ class SnowflakeServiceProvider extends ServiceProvider
 
   /**
    * Configure the resolver via config.
-   *
-   * @param  string  $key
-   * @return string
    */
   private function configureResolver(string $key): string
   {
@@ -83,9 +80,6 @@ class SnowflakeServiceProvider extends ServiceProvider
 
   /**
    * Configure the driver via config.
-   *
-   * @param  string  $key
-   * @return string
    */
   private function configureDriver(string $key): string
   {
@@ -96,9 +90,6 @@ class SnowflakeServiceProvider extends ServiceProvider
 
   /**
    * Resolve the requested SequenceResolver class.
-   *
-   * @param  string  $key
-   * @return SequenceResolver
    */
   private function resolveInstance(string $key): SequenceResolver
   {
@@ -127,9 +118,6 @@ class SnowflakeServiceProvider extends ServiceProvider
 
   /**
    * Resolve and build the requested Driver.
-   *
-   * @param  string  $key
-   * @return SnowflakeDriver
    */
   private function resolveDriver(string $key): SnowflakeDriver
   {

@@ -77,7 +77,7 @@ const releaseNotesGeneratorOptions = {
 module.exports = {
 	debug: true,
 	branches: ['main'],
-	repositoryUrl: 'https://github.com/jetstreamlabs/snowflake',
+	repositoryUrl: 'https://gitlab.com/zenphp/snowflake',
 
 	plugins: [
 		// analyze commits with conventional-changelog
@@ -99,6 +99,6 @@ module.exports = {
 				assets: ['CHANGELOG.md'],
 			},
 		],
-		'@semantic-release/github',
+		'@semantic-release/gitlab',
 	],
 }

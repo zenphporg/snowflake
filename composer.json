@@ -1,46 +1,46 @@
 {
-  "name": "zenphp/snowflake",
-  "description": "An ID Generator for PHP based on Snowflake Algorithm (Twitter announced).",
-  "license": "MIT",
-  "keywords": [
-    "snowflake algorithm",
-    "php snowflake",
-    "laravel snowflake"
-  ],
-  "homepage": "https://gitlab.com/zenphp/snowflake",
-  "authors": [
-    {
-      "name": "secondman",
-      "email": "secondman@jetstreamlabs.com"
-    }
-  ],
-  "require": {
-    "php": "^8.2",
-    "illuminate/database": "^10.0|^11.0"
-  },
-  "require-dev": {
-    "zenphp/pinte": "^1.2",
-    "pestphp/pest": "^2.34",
-    "pestphp/pest-plugin-type-coverage": "^2.8",
-    "pestphp/pest-plugin-watch": "^2.1",
-    "pestphp/pest-plugin-laravel": "^2.3",
-    "mockery/mockery": "^1.6"
-  },
-  "autoload": {
-    "psr-4": {
-      "Zen\\Snowflake\\": "src"
-    }
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Zen\\Snowflake\\Providers\\SnowflakeServiceProvider"
-      ]
-    }
-  },
-  "config": {
-    "allow-plugins": {
-      "pestphp/pest-plugin": true
-    }
-  }
+	"name": "zenphp/snowflake",
+	"description": "An ID Generator for PHP based on Snowflake Algorithm (Twitter announced).",
+	"license": "MIT",
+	"keywords": [
+		"snowflake algorithm",
+		"php snowflake",
+		"laravel snowflake"
+	],
+	"homepage": "https://gitlab.com/zenphp/snowflake",
+	"authors": [
+		{
+			"name": "secondman",
+			"email": "secondman@jetstreamlabs.com"
+		}
+	],
+	"require": {
+		"php": "^8.2",
+		"illuminate/database": "^10.0|^11.0"
+	},
+	"require-dev": {
+		"zenphp/pinte": "^1.2",
+		"pestphp/pest": "^2.34",
+		"pestphp/pest-plugin-type-coverage": "^2.8",
+		"pestphp/pest-plugin-watch": "^2.1",
+		"pestphp/pest-plugin-laravel": "^2.3",
+		"mockery/mockery": "^1.6"
+	},
+	"autoload": {
+		"psr-4": {
+			"Zen\\Snowflake\\": "src"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Zen\\Snowflake\\Providers\\SnowflakeServiceProvider"
+			]
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"pestphp/pest-plugin": true
+		}
+	}
 }

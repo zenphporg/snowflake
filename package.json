@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "scripts": {
+    "lint": "php ./vendor/bin/pinte --dirty",
+    "pinte": "php ./vendor/bin/pinte",
+    "cn": "composer update && npm update",
+    "prepare": "husky"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "header-max-length": [
+        2,
+        "always",
+        120
+      ],
+      "type-enum": [
+        2,
+        "always",
+        [
+          "breaking",
+          "feat",
+          "fix",
+          "task",
+          "refactor",
+          "docs",
+          "chore"
+        ]
+      ]
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/gitlab": "^13.0.3",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "semantic-release": "^23.0.8"
+  }
+}

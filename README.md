@@ -1,11 +1,13 @@
-# JestreamLabs Snowflake
+<p align="center">
+  <image src="/.gitlab/images/snowflake.png" width="250" height="250">
+</p>
+<p align="center">
+  An ID Generator for PHP based on Snowflake Algorithm (Twitter announced).
+</p>
 
-<div>
-  <p align="center">
-    <image src="https://www.pngkey.com/png/full/105-1052235_snowflake-png-transparent-background-snowflake-with-clear-background.png" width="250" height="250">
-  </p>
-  <p align="center">An ID Generator for PHP based on Snowflake Algorithm (Twitter announced).</p>
-</div>
+# Snowflake
+
+`zenphp/snowflake`
 
 ## Description
 
@@ -33,13 +35,13 @@ Based on this, we created this package and integrated multiple sequence-number p
 
 ## Requirement
 
-1. PHP >= 8.0
+1. PHP >= 8.2
 2. **[Composer](https://getcomposer.org/)**
 
 ## Installation
 
-```shell
-$ composer require jetstreamlabs/snowflake
+```zsh
+$ composer require zenphp/snowflake
 ```
 
 ## Useage

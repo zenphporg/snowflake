@@ -2,10 +2,9 @@
 
 # [3.2.0](https://gitlab.com/zenphp/snowflake/compare/v3.1.1...v3.2.0) (2024-04-19)
 
-
 ### Features
 
-* updated to support laravel 11 ([c645f51](https://gitlab.com/zenphp/snowflake/commit/c645f5113ddafc94b3b9df969c15ea99913b80fe))
+- updated to support laravel 11 ([c645f51](https://gitlab.com/zenphp/snowflake/commit/c645f5113ddafc94b3b9df969c15ea99913b80fe))
 
 ## [3.1.1](https://github.com/jetstreamlabs/snowflake/compare/v3.1.0...v3.1.1) (2023-05-17)
 

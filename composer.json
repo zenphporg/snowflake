@@ -16,15 +16,14 @@
 	],
 	"require": {
 		"php": "^8.2",
-		"illuminate/database": "^10.0|^11.0"
+		"illuminate/database": "^10.0|^11.0|^12.0"
 	},
 	"require-dev": {
-		"zenphp/pinte": "^1.2",
-		"pestphp/pest": "^2.34",
-		"pestphp/pest-plugin-type-coverage": "^2.8",
-		"pestphp/pest-plugin-watch": "^2.1",
-		"pestphp/pest-plugin-laravel": "^2.3",
-		"mockery/mockery": "^1.6"
+		"pestphp/pest": "^2.36.0",
+		"pestphp/pest-plugin-type-coverage": "^2.8.7",
+		"pestphp/pest-plugin-laravel": "^2.4.0",
+		"mockery/mockery": "^1.6.12",
+		"zenphp/fixr": "^1.0.4"
 	},
 	"autoload": {
 		"psr-4": {

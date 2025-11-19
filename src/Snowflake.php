@@ -177,7 +177,7 @@ class Snowflake implements SnowflakeDriver
   public function getDefaultSequenceResolver(): SequenceResolver
   {
     return $this->defaultSequenceResolver
-      ?: $this->defaultSequenceResolver = new RandomResolver();
+      ?: $this->defaultSequenceResolver = new RandomResolver;
   }
 
   /**

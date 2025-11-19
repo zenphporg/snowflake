@@ -1,23 +1,24 @@
 {
 	"private": true,
 	"scripts": {
-		"pinte": "php ./vendor/bin/pinte",
+		"fix": "./vendor/bin/fixr",
 		"test": "./vendor/bin/pest",
-		"cn": "composer update && npm update"
+		"cb": "composer update && bun update"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^19.2.2",
-		"@commitlint/config-conventional": "^19.2.2",
+		"@commitlint/cli": "^20.1.0",
+		"@commitlint/config-conventional": "^20.0.0",
 		"@semantic-release/changelog": "^6.0.3",
 		"@semantic-release/git": "^10.0.1",
-		"@semantic-release/gitlab": "^13.0.3",
-		"husky": "^9.0.11",
-		"lint-staged": "^15.2.2",
-		"semantic-release": "^23.0.8"
+		"@semantic-release/gitlab": "^13.2.9",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.2.6",
+		"prettier": "^3.6.2",
+		"semantic-release": "^25.0.2"
 	},
 	"lint-staged": {
 		"*.{js,json,md}": "prettier --write .",
-		"*.php": "./vendor/bin/pinte --dirty"
+		"*.php": "./vendor/bin/fixr --dirty"
 	},
 	"commitlint": {
 		"extends": [

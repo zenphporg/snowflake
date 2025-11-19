@@ -22,7 +22,7 @@ php_tests:
 
 release:
   stage: release
-  image: node:24.8.0
+  image: node:24.10.0
   before_script:
     - npm install
   script:

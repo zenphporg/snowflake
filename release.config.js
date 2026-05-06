@@ -82,7 +82,7 @@ const releaseNotesGeneratorOptions = {
 module.exports = {
 	debug: true,
 	branches: ['main'],
-	repositoryUrl: 'https://gitlab.com/zenphp/snowflake',
+	repositoryUrl: 'https://github.com/zenphporg/snowflake',
 
 	plugins: [
 		// analyze commits with conventional-changelog

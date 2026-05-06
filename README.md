@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/.gitlab/images/snowflake.png" width="250" height="250">
+  <img src="/.github/image/snowflake.png" width="250" height="250">
 </p>
 <p align="center">
   An ID Generator for PHP based on Snowflake Algorithm (Twitter announced).

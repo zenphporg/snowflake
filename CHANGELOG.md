@@ -2,23 +2,20 @@
 
 ## [3.2.1](https://gitlab.com/zenphp/snowflake/compare/v3.2.0...v3.2.1) (2025-11-19)
 
-
 ### Bug Fixes
 
-* update release config and ci ([a52bc90](https://gitlab.com/zenphp/snowflake/commit/a52bc90f62b6795d039aa51fb8dcb9a07c7122f6))
-
+- update release config and ci ([a52bc90](https://gitlab.com/zenphp/snowflake/commit/a52bc90f62b6795d039aa51fb8dcb9a07c7122f6))
 
 ### Code Refactoring
 
-* update deps - add support for … ([825385b](https://gitlab.com/zenphp/snowflake/commit/825385bcf80658b9ba71f860c92dfa80780d8b9d))
-
+- update deps - add support for … ([825385b](https://gitlab.com/zenphp/snowflake/commit/825385bcf80658b9ba71f860c92dfa80780d8b9d))
 
 ### Maintenance
 
-* missed updating ci to node 24 ([642daf6](https://gitlab.com/zenphp/snowflake/commit/642daf6ed5aaec8fc1af1c857e0e183dcc20cdd4))
-* semantic release requires node 24.10 ([1636762](https://gitlab.com/zenphp/snowflake/commit/1636762258cf0cfe5c49d62ac4ea7c466318d247))
-* style updates ([2b45b65](https://gitlab.com/zenphp/snowflake/commit/2b45b6593d93b108f1cf6122bcdd677f1115c531))
-* update to php 8.4 ([28ed240](https://gitlab.com/zenphp/snowflake/commit/28ed24030005d5f5453afdf74fd4f5448202bf9d))
+- missed updating ci to node 24 ([642daf6](https://gitlab.com/zenphp/snowflake/commit/642daf6ed5aaec8fc1af1c857e0e183dcc20cdd4))
+- semantic release requires node 24.10 ([1636762](https://gitlab.com/zenphp/snowflake/commit/1636762258cf0cfe5c49d62ac4ea7c466318d247))
+- style updates ([2b45b65](https://gitlab.com/zenphp/snowflake/commit/2b45b6593d93b108f1cf6122bcdd677f1115c531))
+- update to php 8.4 ([28ed240](https://gitlab.com/zenphp/snowflake/commit/28ed24030005d5f5453afdf74fd4f5448202bf9d))
 
 # [3.2.0](https://gitlab.com/zenphp/snowflake/compare/v3.1.1...v3.2.0) (2024-04-19)
 

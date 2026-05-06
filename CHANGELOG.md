@@ -1,3 +1,30 @@
+# Release Notes
+
+# [3.3.0](https://github.com/zenphporg/snowflake/compare/v3.2.1...v3.3.0) (2026-05-06)
+
+
+### Bug Fixes
+
+* wrong changelog ([819a05b](https://github.com/zenphporg/snowflake/commit/819a05b4ddf9f277e282d28432bc76bc24641ede))
+
+
+### Features
+
+* update for laravel 13 compatability ([7d122f9](https://github.com/zenphporg/snowflake/commit/7d122f91b270890d21658c097af823a84ce9b432))
+* updates for laravel 13 compatability ([7ff787b](https://github.com/zenphporg/snowflake/commit/7ff787b9cb20aea9bfbd151d58cc7b8dc85ec11d))
+
+
+### Maintenance
+
+* style ([0c85180](https://github.com/zenphporg/snowflake/commit/0c851808244ef5fdc25fc74214659c5041c9f9ff))
+* update test.yml ([2e9324d](https://github.com/zenphporg/snowflake/commit/2e9324dc2325e7a9906abbf67fd15e818c077193))
+
+
+### Work in Progress
+
+* more changes for github move ([9d1f6f9](https://github.com/zenphporg/snowflake/commit/9d1f6f999eae85741b632e62c949d86dc5a7c7d0))
+* relocating from gitlab part a ([b23fe76](https://github.com/zenphporg/snowflake/commit/b23fe768b2fb01e6e220e76165e6ff7966359ef9))
+
 # Snowflake Changelog
 
 ## [3.2.1](https://gitlab.com/zenphp/snowflake/compare/v3.2.0...v3.2.1) (2025-11-19)

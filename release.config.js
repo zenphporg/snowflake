@@ -91,7 +91,7 @@ const releaseNotesGeneratorOptions = {
 export default {
 	debug: true,
 	branches: ['+([0-9])?(.{+([0-9]),x}).x', 'main'],
-	repositoryUrl: 'https://github.com/zenphporg/modulr',
+	repositoryUrl: 'https://github.com/zenphporg/snowflake',
 
 	plugins: [
 		['@semantic-release/commit-analyzer', commitAnalyzerOptions],

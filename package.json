@@ -10,7 +10,7 @@
 		"@commitlint/config-conventional": "^20.5.3",
 		"@semantic-release/changelog": "^6.0.3",
 		"@semantic-release/git": "^10.0.1",
-		"@semantic-release/gitlab": "^13.3.2",
+		"@semantic-release/github": "^12.0.6",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.4.0",
 		"prettier": "^3.8.3",
@@ -37,10 +37,14 @@
 					"breaking",
 					"feat",
 					"fix",
-					"task",
 					"refactor",
 					"docs",
-					"chore"
+					"task",
+					"issue",
+					"wip",
+					"chore",
+					"style",
+					"test"
 				]
 			]
 		}

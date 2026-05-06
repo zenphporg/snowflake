@@ -1,16 +1,17 @@
 const commitAnalyzerOptions = {
-	preset: 'angular',
+	preset: 'conventionalcommits',
 	releaseRules: [
 		{ type: 'breaking', release: 'major' },
 		{ type: 'feat', release: 'minor' },
 		{ type: 'fix', release: 'patch' },
-		{ type: 'task', release: 'patch' },
 		{ type: 'refactor', release: 'patch' },
 		{ type: 'docs', release: 'patch' },
+		{ type: 'task', release: 'patch' },
+		{ type: 'issue', release: 'patch' },
+		{ type: 'wip', release: false },
 		{ type: 'chore', release: false },
 		{ scope: 'style', release: false },
 		{ scope: 'test', release: false },
-		{ scope: 'deploy', release: false },
 	],
 	parserOpts: {
 		noteKeywords: [],
@@ -20,32 +21,40 @@ const commitAnalyzerOptions = {
 const releaseNotesGeneratorOptions = {
 	writerOpts: {
 		transform: (commit, context) => {
-			// Create a mutable copy of the commit object
-			const modifiedCommit = { ...commit }
 			const issues = []
 
 			const types = {
 				breaking: 'Breaking',
 				feat: 'Features',
 				fix: 'Bug Fixes',
-				task: 'Task Commit',
 				refactor: 'Code Refactoring',
 				docs: 'Documentation',
+				task: 'Code or other task',
+				issue: 'Non-bug Issue Resolved',
+				wip: 'Work in Progress',
 				chore: 'Maintenance',
+				style: 'Code Style Adjustments',
+				test: 'Code Testing',
 			}
 
-			modifiedCommit.type = types[commit.type]
+			// Create a new object to avoid modifying the immutable commit
+			const modifiedCommit = Object.assign({}, commit)
 
-			if (typeof commit.hash === 'string') {
-				modifiedCommit.shortHash = commit.hash.substring(0, 7)
+			// Map the type
+			if (types[modifiedCommit.type]) {
+				modifiedCommit.type = types[modifiedCommit.type]
 			}
 
-			if (typeof commit.subject === 'string') {
+			if (typeof modifiedCommit.hash === 'string') {
+				modifiedCommit.shortHash = modifiedCommit.hash.substring(0, 7)
+			}
+
+			if (typeof modifiedCommit.subject === 'string') {
 				let url = context.repository ? `${context.host}/${context.owner}/${context.repository}` : context.repoUrl
 				if (url) {
 					url = `${url}/issues/`
 					// Issue URLs.
-					modifiedCommit.subject = commit.subject.replace(/#([0-9]+)/g, (_, issue) => {
+					modifiedCommit.subject = modifiedCommit.subject.replace(/#([0-9]+)/g, (_, issue) => {
 						issues.push(issue)
 						return `[#${issue}](${url}${issue})`
 					})
@@ -66,7 +75,7 @@ const releaseNotesGeneratorOptions = {
 			}
 
 			// remove references that already appear in the subject
-			modifiedCommit.references = commit.references.filter((reference) => {
+			modifiedCommit.references = modifiedCommit.references.filter((reference) => {
 				if (issues.indexOf(reference.issue) === -1) {
 					return true
 				}
@@ -79,31 +88,27 @@ const releaseNotesGeneratorOptions = {
 	},
 }
 
-module.exports = {
+export default {
 	debug: true,
-	branches: ['main'],
-	repositoryUrl: 'https://github.com/zenphporg/snowflake',
+	branches: ['+([0-9])?(.{+([0-9]),x}).x', 'main'],
+	repositoryUrl: 'https://github.com/zenphporg/modulr',
 
 	plugins: [
-		// analyze commits with conventional-changelog
 		['@semantic-release/commit-analyzer', commitAnalyzerOptions],
-		// generate changelog content with conventional-changelog
 		['@semantic-release/release-notes-generator', releaseNotesGeneratorOptions],
-		// updates the changelog file
 		[
 			'@semantic-release/changelog',
 			{
 				changelogFile: 'CHANGELOG.md',
-				changelogTitle: '# Snowflake Changelog',
+				changelogTitle: '# Release Notes',
 			},
 		],
-		// creating a new version commit
 		[
 			'@semantic-release/git',
 			{
 				assets: ['CHANGELOG.md'],
 			},
 		],
-		'@semantic-release/gitlab',
+		['@semantic-release/github'],
 	],
 }

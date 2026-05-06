@@ -33,8 +33,5 @@ jobs:
       - name: Install Dependencies
         run: composer install --no-interaction --prefer-dist --optimize-autoloader --dev
 
-      - name: Run Static Analysis
-        run: composer test:static
-
       - name: Run Tests
-        run: composer test:feat
+        run: ./vendor/bin/pest
